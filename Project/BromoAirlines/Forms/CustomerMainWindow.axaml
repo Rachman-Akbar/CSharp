@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BromoAirlines.Forms.CustomerMainWindow"
+        Title="Bromo Airlines - Customer" Width="1100" Height="700"
+        WindowStartupLocation="CenterScreen">
+  <Grid RowDefinitions="48,*" ColumnDefinitions="230,*">
+    <Border Grid.Row="0" Grid.ColumnSpan="2" Background="{StaticResource Primary}" Padding="12,0">
+      <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
+        <TextBlock Text="✈" Foreground="White" FontSize="18"/>
+        <TextBlock x:Name="LblTitle" Text="Cari Penerbangan" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center"/>
+        <TextBlock x:Name="LblUser" Foreground="White" Opacity="0.85" VerticalAlignment="Center"/>
+      </StackPanel>
+    </Border>
+    <Border Grid.Row="1" Grid.Column="0" Background="White" Padding="8">
+      <Grid RowDefinitions="*,Auto">
+        <StackPanel Spacing="2">
+          <Button x:Name="MCariBtn" Content="🔍 Cari Penerbangan" Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"/>
+          <Button x:Name="MRiwayatBtn" Content="🧾 Riwayat Transaksi" Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"/>
+        </StackPanel>
+        <Button x:Name="BtnLogout" Grid.Row="1" Content="⏻ Logout" Foreground="{StaticResource Danger}" Background="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"/>
+      </Grid>
+    </Border>
+    <ContentControl x:Name="Host" Grid.Row="1" Grid.Column="1" Background="{StaticResource PageBg}"/>
+  </Grid>
+</Window>

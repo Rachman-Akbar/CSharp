@@ -1,0 +1,49 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.App"
+             RequestedThemeVariant="Light">
+    <Application.Resources>
+        <!-- Palet dari PDF: biru navy utama, aksen terang, bg netral -->
+        <SolidColorBrush x:Key="Primary">#0B5FA5</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryDark">#083B66</SolidColorBrush>
+        <SolidColorBrush x:Key="Accent">#2E9BFF</SolidColorBrush>
+        <SolidColorBrush x:Key="PageBg">#F5F7FA</SolidColorBrush>
+        <SolidColorBrush x:Key="Muted">#6B7280</SolidColorBrush>
+        <SolidColorBrush x:Key="BtnGray">#E5E7EB</SolidColorBrush>
+        <SolidColorBrush x:Key="Danger">#D32F2F</SolidColorBrush>
+    </Application.Resources>
+    <Application.Styles>
+        <FluentTheme />
+        <Style Selector="Button.btn-primary">
+            <Setter Property="Background" Value="{StaticResource Primary}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="16,8"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="4"/>
+        </Style>
+        <Style Selector="Button.btn-primary:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="{StaticResource PrimaryDark}"/>
+        </Style>
+        <Style Selector="Button.btn-gray">
+            <Setter Property="Background" Value="{StaticResource BtnGray}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="24,8"/>
+            <Setter Property="CornerRadius" Value="2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#9CA3AF"/>
+        </Style>
+        <Style Selector="TextBlock.page-title">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style Selector="TextBlock.page-sub">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+        </Style>
+        <Style Selector="TextBlock.field-err">
+            <Setter Property="Foreground" Value="{StaticResource Danger}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Application.Styles>
+</Application>

@@ -1,0 +1,29 @@
+<UserControl x:CompileBindings="False" xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.Forms.Pages.RiwayatView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+  <StackPanel Spacing="8" Margin="20">
+    <TextBlock Classes="page-title" Text="Riwayat Transaksi"/>
+    <TextBlock Classes="page-sub" Text="Hanya transaksi milik akun ini"/>
+    <Button x:Name="BtnRefresh" Content="Refresh" Classes="btn-gray" HorizontalAlignment="Left"/>
+    <DataGrid x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Height="260">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="ID" Binding="{Binding HeaderID}"/>
+        <DataGridTextColumn Header="Tanggal" Binding="{Binding Tgl}"/>
+        <DataGridTextColumn Header="Kode" Binding="{Binding Kode}"/>
+        <DataGridTextColumn Header="Rute" Binding="{Binding Rute}"/>
+        <DataGridTextColumn Header="Promo" Binding="{Binding Promo}"/>
+        <DataGridTextColumn Header="Total" Binding="{Binding Total}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <TextBlock Text="Detail Penumpang" FontWeight="SemiBold"/>
+    <DataGrid x:Name="GridDetail" AutoGenerateColumns="False" IsReadOnly="True" Height="180">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Titel" Binding="{Binding TitelPenumpang}"/>
+        <DataGridTextColumn Header="Nama Lengkap" Binding="{Binding NamaLengkapPenumpang}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <TextBlock x:Name="LblEmpty" Classes="page-sub" Text="Belum ada transaksi." IsVisible="False"/>
+  </StackPanel>
+  </ScrollViewer>
+</UserControl>

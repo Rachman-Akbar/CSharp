@@ -17,3 +17,13 @@ dotnet new avalonia.app -n NamaAppBaru -o NamaAppBaru --framework net9.0
 cd NamaAppBaru
 dotnet run
 Isi kalkulatornya (tombol, display, logika hitung) tinggal ditulis di dua file: MainWindow.axaml untuk tampilan, MainWindow.axaml.cs untuk logika — sama seperti yang sudah saya buatkan kemarin.
+
+Username	Sandi	Role
+
+admin	admin1234	Admin
+andi	andi12345	Customer
+budi	budi12345	Customer
+siti	siti12345	Customer
+dewi	dewi12345	Customer
+agus	agus12345	Customer
+

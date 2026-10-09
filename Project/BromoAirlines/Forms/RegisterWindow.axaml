@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BromoAirlines.Forms.RegisterWindow"
+        Title="Bromo Airlines - Daftar Akun" Width="900" Height="560"
+        WindowStartupLocation="CenterScreen">
+  <Grid ColumnDefinitions="420,*">
+    <Border Grid.Column="0" Background="White" Padding="36,24">
+      <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <StackPanel Spacing="8">
+        <TextBlock Classes="page-title" Text="Daftar Akun"/>
+        <TextBlock Classes="page-sub" Text="Daftarkan diri Anda untuk menggunakan Bromo Airlines"/>
+        <TextBlock Text="Username" Margin="0,10,0,0"/>
+        <TextBox x:Name="TxtUser" Watermark="andi"/>
+        <TextBlock Text="Nama"/>
+        <TextBox x:Name="TxtNama" Watermark="Andi Taulany"/>
+        <TextBlock Text="Tanggal Lahir"/>
+        <DatePicker x:Name="DpTgl"/>
+        <TextBlock Text="Nomor Telepon"/>
+        <TextBox x:Name="TxtTelp" Watermark="08123456789"/>
+        <TextBlock Text="Password"/>
+        <TextBox x:Name="TxtPass" PasswordChar="•" Watermark="min. 8 karakter"/>
+        <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+        <Button x:Name="BtnDaftar" Classes="btn-gray" Content="Daftar" HorizontalAlignment="Center" MinWidth="140" Margin="0,8,0,0"/>
+        <StackPanel Orientation="Horizontal" Spacing="6">
+          <TextBlock Text="Sudah punya akun?"/>
+          <Button x:Name="BtnToLogin" Content="Login" Background="Transparent" Foreground="{StaticResource Accent}" Padding="0" Cursor="Hand"/>
+        </StackPanel>
+      </StackPanel>
+      </ScrollViewer>
+    </Border>
+    <Image Grid.Column="1" Source="avares://BromoAirlines/Resources/splash-logo.png" Stretch="UniformToFill"/>
+  </Grid>
+</Window>

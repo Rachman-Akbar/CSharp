@@ -1,0 +1,50 @@
+<UserControl x:CompileBindings="False" xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.Forms.Pages.MasterJadwalView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+  <StackPanel Spacing="8" Margin="20">
+    <TextBlock Classes="page-title" Text="Master Jadwal Penerbangan"/>
+    <TextBlock Classes="page-sub" Text="Semua jadwal penerbangan akan muncul di sini (terbaru dulu)"/>
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBox x:Name="TxtCari" PlaceholderText="Cari kode..." Width="250"/>
+      <Button x:Name="BtnCari" Content="Cari" Classes="btn-gray"/>
+      <Button x:Name="BtnRefresh" Content="Refresh" Classes="btn-gray"/>
+    </StackPanel>
+    <DataGrid x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Height="240">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Kode" Binding="{Binding KodePenerbangan}"/>
+        <DataGridTextColumn Header="Dari" Binding="{Binding NamaBerangkat}"/>
+        <DataGridTextColumn Header="Ke" Binding="{Binding NamaTujuan}"/>
+        <DataGridTextColumn Header="Maskapai" Binding="{Binding NamaMaskapai}"/>
+        <DataGridTextColumn Header="Berangkat" Binding="{Binding TanggalWaktuKeberangkatan}"/>
+        <DataGridTextColumn Header="Harga" Binding="{Binding HargaPerTiket}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <Grid ColumnDefinitions="130,*,130,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8" ColumnSpacing="8">
+      <TextBlock Grid.Row="0" Grid.Column="0" Text="Kode (AA-1234)" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="0" Grid.Column="1" x:Name="InKode" MaxLength="7"/>
+      <TextBlock Grid.Row="0" Grid.Column="2" Text="Tanggal" VerticalAlignment="Center"/>
+      <DatePicker Grid.Row="0" Grid.Column="3" x:Name="InTgl"/>
+      <TextBlock Grid.Row="1" Grid.Column="0" Text="Dari" VerticalAlignment="Center"/>
+      <ComboBox Grid.Row="1" Grid.Column="1" x:Name="InDari" DisplayMemberBinding="{Binding Nama}"/>
+      <TextBlock Grid.Row="1" Grid.Column="2" Text="Waktu (HH:mm)" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="1" Grid.Column="3" x:Name="InWaktu" PlaceholderText="08:00"/>
+      <TextBlock Grid.Row="2" Grid.Column="0" Text="Ke" VerticalAlignment="Center"/>
+      <ComboBox Grid.Row="2" Grid.Column="1" x:Name="InKe" DisplayMemberBinding="{Binding Nama}"/>
+      <TextBlock Grid.Row="2" Grid.Column="2" Text="Durasi" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="2" Grid.Column="3" x:Name="InDurasi" PlaceholderText="1 jam 30 menit"/>
+      <TextBlock Grid.Row="3" Grid.Column="0" Text="Maskapai" VerticalAlignment="Center"/>
+      <ComboBox Grid.Row="3" Grid.Column="1" x:Name="InMaskapai" DisplayMemberBinding="{Binding Nama}"/>
+      <TextBlock Grid.Row="3" Grid.Column="2" Text="Harga" VerticalAlignment="Center"/>
+      <NumericUpDown Grid.Row="3" Grid.Column="3" x:Name="InHarga" Minimum="1" Value="1"/>
+    </Grid>
+    <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+    <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+      <Button x:Name="BtnUbah" Content="Ubah" Classes="btn-gray"/>
+      <Button x:Name="BtnHapus" Content="Hapus" Classes="btn-gray"/>
+      <Button x:Name="BtnBatal" Content="Batal" Classes="btn-gray"/>
+      <Button x:Name="BtnSimpan" Content="Simpan" Classes="btn-gray"/>
+    </StackPanel>
+  </StackPanel>
+  </ScrollViewer>
+</UserControl>

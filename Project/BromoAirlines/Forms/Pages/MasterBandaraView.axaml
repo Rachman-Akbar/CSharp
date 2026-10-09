@@ -1,0 +1,46 @@
+<UserControl x:CompileBindings="False" xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.Forms.Pages.MasterBandaraView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+  <StackPanel Spacing="8" Margin="20">
+    <TextBlock Classes="page-title" Text="Master Bandara"/>
+    <TextBlock Classes="page-sub" Text="Semua bandara yang terdaftar akan muncul di sini"/>
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBox x:Name="TxtCari" PlaceholderText="Cari nama / IATA / kota..." Width="300"/>
+      <Button x:Name="BtnCari" Content="Cari" Classes="btn-gray"/>
+      <Button x:Name="BtnRefresh" Content="Refresh" Classes="btn-gray"/>
+    </StackPanel>
+    <DataGrid x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Height="260">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}" Width="*"/>
+        <DataGridTextColumn Header="Kode IATA" Binding="{Binding KodeIATA}"/>
+        <DataGridTextColumn Header="Kota" Binding="{Binding Kota}"/>
+        <DataGridTextColumn Header="Negara" Binding="{Binding NamaNegara}"/>
+        <DataGridTextColumn Header="Terminal" Binding="{Binding JumlahTerminal}"/>
+        <DataGridTextColumn Header="Alamat" Binding="{Binding Alamat}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <Grid ColumnDefinitions="120,*,140,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8" ColumnSpacing="8">
+      <TextBlock Grid.Row="0" Grid.Column="0" Text="Nama" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="0" Grid.Column="1" x:Name="InNama"/>
+      <TextBlock Grid.Row="0" Grid.Column="2" Text="Jumlah Terminal" VerticalAlignment="Center"/>
+      <NumericUpDown Grid.Row="0" Grid.Column="3" x:Name="InTerminal" Minimum="1" Value="1"/>
+      <TextBlock Grid.Row="1" Grid.Column="0" Text="Kode IATA" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="1" Grid.Column="1" x:Name="InIata" MaxLength="3"/>
+      <TextBlock Grid.Row="1" Grid.Column="2" Text="Alamat" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" x:Name="InAlamat" Height="64" AcceptsReturn="True"/>
+      <TextBlock Grid.Row="2" Grid.Column="0" Text="Kota" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="2" Grid.Column="1" x:Name="InKota"/>
+      <TextBlock Grid.Row="3" Grid.Column="0" Text="Negara" VerticalAlignment="Center"/>
+      <ComboBox Grid.Row="3" Grid.Column="1" x:Name="InNegara" DisplayMemberBinding="{Binding Nama}"/>
+    </Grid>
+    <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+    <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+      <Button x:Name="BtnUbah" Content="Ubah" Classes="btn-gray"/>
+      <Button x:Name="BtnHapus" Content="Hapus" Classes="btn-gray"/>
+      <Button x:Name="BtnBatal" Content="Batal" Classes="btn-gray"/>
+      <Button x:Name="BtnSimpan" Content="Simpan" Classes="btn-gray"/>
+    </StackPanel>
+  </StackPanel>
+  </ScrollViewer>
+</UserControl>

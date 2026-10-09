@@ -1,0 +1,25 @@
+<UserControl x:CompileBindings="False" xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.Forms.Pages.CariView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+  <StackPanel Spacing="8" Margin="20">
+    <TextBlock Classes="page-title" Text="Cari Penerbangan"/>
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <ComboBox x:Name="InDari" DisplayMemberBinding="{Binding Nama}" PlaceholderText="Dari" Width="220"/>
+      <ComboBox x:Name="InKe" DisplayMemberBinding="{Binding Nama}" PlaceholderText="Ke" Width="220"/>
+      <DatePicker x:Name="InTgl"/>
+      <Button x:Name="BtnCari" Content="Cari" Classes="btn-primary"/>
+    </StackPanel>
+    <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+    <DataGrid x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Height="320">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Kode" Binding="{Binding KodePenerbangan}"/>
+        <DataGridTextColumn Header="Maskapai" Binding="{Binding NamaMaskapai}"/>
+        <DataGridTextColumn Header="Berangkat" Binding="{Binding TanggalWaktuKeberangkatan}"/>
+        <DataGridTextColumn Header="Harga" Binding="{Binding HargaPerTiket}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <Button x:Name="BtnPilih" Content="Pilih &amp; Pesan" Classes="btn-primary" HorizontalAlignment="Right"/>
+  </StackPanel>
+  </ScrollViewer>
+</UserControl>

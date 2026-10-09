@@ -1,0 +1,40 @@
+<UserControl x:CompileBindings="False" xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BromoAirlines.Forms.Pages.MasterMaskapaiView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+  <StackPanel Spacing="8" Margin="20">
+    <TextBlock Classes="page-title" Text="Master Maskapai"/>
+    <TextBlock Classes="page-sub" Text="Semua maskapai yang terdaftar akan muncul di sini"/>
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBox x:Name="TxtCari" PlaceholderText="Cari nama / perusahaan..." Width="300"/>
+      <Button x:Name="BtnCari" Content="Cari" Classes="btn-gray"/>
+      <Button x:Name="BtnRefresh" Content="Refresh" Classes="btn-gray"/>
+    </StackPanel>
+    <DataGrid x:Name="Grid" AutoGenerateColumns="False" IsReadOnly="True" Height="260">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}" Width="*"/>
+        <DataGridTextColumn Header="Perusahaan" Binding="{Binding Perusahaan}" Width="*"/>
+        <DataGridTextColumn Header="Kru" Binding="{Binding JumlahKru}"/>
+        <DataGridTextColumn Header="Deskripsi" Binding="{Binding Deskripsi}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8" ColumnSpacing="8">
+      <TextBlock Grid.Row="0" Grid.Column="0" Text="Nama" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="0" Grid.Column="1" x:Name="InNama"/>
+      <TextBlock Grid.Row="1" Grid.Column="0" Text="Perusahaan" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="1" Grid.Column="1" x:Name="InPerusahaan"/>
+      <TextBlock Grid.Row="2" Grid.Column="0" Text="Jumlah Kru" VerticalAlignment="Center"/>
+      <NumericUpDown Grid.Row="2" Grid.Column="1" x:Name="InKru" Minimum="1" Value="1"/>
+      <TextBlock Grid.Row="3" Grid.Column="0" Text="Deskripsi" VerticalAlignment="Center"/>
+      <TextBox Grid.Row="3" Grid.Column="1" x:Name="InDeskripsi" Height="64" AcceptsReturn="True"/>
+    </Grid>
+    <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+    <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+      <Button x:Name="BtnUbah" Content="Ubah" Classes="btn-gray"/>
+      <Button x:Name="BtnHapus" Content="Hapus" Classes="btn-gray"/>
+      <Button x:Name="BtnBatal" Content="Batal" Classes="btn-gray"/>
+      <Button x:Name="BtnSimpan" Content="Simpan" Classes="btn-gray"/>
+    </StackPanel>
+  </StackPanel>
+  </ScrollViewer>
+</UserControl>

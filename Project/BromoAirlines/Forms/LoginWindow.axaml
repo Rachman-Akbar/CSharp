@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BromoAirlines.Forms.LoginWindow"
+        Title="Bromo Airlines - Login" Width="900" Height="540"
+        WindowStartupLocation="CenterScreen">
+  <Grid ColumnDefinitions="420,*">
+    <!-- Kiri: form (seperti mockup PDF) -->
+    <Border Grid.Column="0" Background="White" Padding="36,28">
+      <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <StackPanel Spacing="10">
+        <TextBlock Classes="page-title" Text="Login"/>
+        <TextBlock Classes="page-sub" Text="Masuk untuk menggunakan Bromo Airlines"/>
+        <TextBlock Text="Username" Margin="0,12,0,0"/>
+        <TextBox x:Name="TxtUser" Watermark="username"/>
+        <TextBlock Text="Password"/>
+        <TextBox x:Name="TxtPass" PasswordChar="•" Watermark="password"/>
+        <CheckBox x:Name="ChkShow" Content="Tampilkan password"/>
+        <TextBlock x:Name="LblErr" Classes="field-err" IsVisible="False"/>
+        <Button x:Name="BtnLogin" Classes="btn-primary" Content="Login" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,8,0,0"/>
+        <StackPanel Orientation="Horizontal" Spacing="6" Margin="0,6,0,0">
+          <TextBlock Text="Belum punya akun?"/>
+          <Button x:Name="BtnToRegister" Content="Daftar" Background="Transparent" Foreground="{StaticResource Accent}" Padding="0" Cursor="Hand"/>
+        </StackPanel>
+        <ProgressBar x:Name="Busy" IsIndeterminate="True" IsVisible="False" Height="6" Margin="0,8,0,0"/>
+      </StackPanel>
+      </ScrollViewer>
+    </Border>
+    <!-- Kanan: aset splash dari PDF (logo putih di gradasi biru) -->
+    <Image Grid.Column="1" Source="avares://BromoAirlines/Resources/splash-logo.png" Stretch="UniformToFill"/>
+  </Grid>
+</Window>
