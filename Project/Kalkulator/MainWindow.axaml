@@ -1,0 +1,119 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Kalkulator.Avalonia.MainWindow"
+        Title="Kalkulator"
+        Width="360" Height="580"
+        MinWidth="320" MinHeight="500"
+        WindowStartupLocation="CenterScreen">
+
+  <Window.Styles>
+    <!-- Basis semua tombol: besar, kontras, mudah dibaca -->
+    <Style Selector="Button">
+      <Setter Property="CornerRadius" Value="12"/>
+      <Setter Property="Margin" Value="5"/>
+      <Setter Property="Padding" Value="0"/>
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+    <Style Selector="Button.num">
+      <Setter Property="FontSize" Value="24"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Background" Value="#FFFFFF"/>
+      <Setter Property="Foreground" Value="#1A1A1A"/>
+      <Setter Property="BorderBrush" Value="#E2E2E2"/>
+      <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+    <Style Selector="Button.func">
+      <Setter Property="FontSize" Value="20"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Background" Value="#F3F3F3"/>
+      <Setter Property="Foreground" Value="#1A1A1A"/>
+      <Setter Property="BorderBrush" Value="#E2E2E2"/>
+      <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+    <!-- Tombol C dibuat merah agar jelas sebagai reset -->
+    <Style Selector="Button.danger">
+      <Setter Property="Background" Value="#FDE7E9"/>
+      <Setter Property="Foreground" Value="#C42B1C"/>
+      <Setter Property="BorderBrush" Value="#F5C2C0"/>
+      <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+    <Style Selector="Button.op">
+      <Setter Property="FontSize" Value="26"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="Background" Value="#FFB900"/>
+      <Setter Property="Foreground" Value="#1A1A1A"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style Selector="Button.eq">
+      <Setter Property="FontSize" Value="28"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="Background" Value="#0078D7"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+  </Window.Styles>
+
+  <Grid Margin="16" RowDefinitions="Auto,*" RowSpacing="8">
+
+    <!-- Kartu display: riwayat + angka utama -->
+    <Border Grid.Row="0"
+            CornerRadius="14"
+            BorderBrush="#E2E2E2" BorderThickness="1"
+            Background="#FAFAFA"
+            Padding="14,10">
+      <Grid RowDefinitions="Auto,Auto">
+        <TextBlock x:Name="LblHistory"
+                   Grid.Row="0"
+                   FontSize="16" FontWeight="Medium" Foreground="#707070"
+                   HorizontalAlignment="Right"
+                   MinHeight="24"
+                   TextTrimming="CharacterEllipsis"
+                   Text=""/>
+        <TextBox x:Name="TxtDisplay"
+                 Grid.Row="1"
+                 FontSize="48" FontWeight="Bold"
+                 Foreground="#111111"
+                 HorizontalContentAlignment="Right"
+                 VerticalContentAlignment="Center"
+                 IsReadOnly="True" Focusable="False"
+                 BorderThickness="0" Background="Transparent"
+                 MinHeight="64"
+                 Text="0" Margin="0,2,0,0"/>
+      </Grid>
+    </Border>
+
+    <!-- Grid tombol 5x4 -->
+    <Grid Grid.Row="1"
+          RowDefinitions="*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*">
+      <Button Grid.Row="0" Grid.Column="0" Classes="func danger" Content="C" Click="BtnClear_Click"/>
+      <Button Grid.Row="0" Grid.Column="1" Classes="func" Content="⌫" Click="BtnBackspace_Click"/>
+      <Button Grid.Row="0" Grid.Column="2" Classes="func" Content="%" Click="BtnPersen_Click"/>
+      <Button Grid.Row="0" Grid.Column="3" Classes="op" Content="÷" Tag="/" Click="BtnOperator_Click"/>
+
+      <Button Grid.Row="1" Grid.Column="0" Classes="num" Content="7" Click="BtnAngka_Click"/>
+      <Button Grid.Row="1" Grid.Column="1" Classes="num" Content="8" Click="BtnAngka_Click"/>
+      <Button Grid.Row="1" Grid.Column="2" Classes="num" Content="9" Click="BtnAngka_Click"/>
+      <Button Grid.Row="1" Grid.Column="3" Classes="op" Content="×" Tag="*" Click="BtnOperator_Click"/>
+
+      <Button Grid.Row="2" Grid.Column="0" Classes="num" Content="4" Click="BtnAngka_Click"/>
+      <Button Grid.Row="2" Grid.Column="1" Classes="num" Content="5" Click="BtnAngka_Click"/>
+      <Button Grid.Row="2" Grid.Column="2" Classes="num" Content="6" Click="BtnAngka_Click"/>
+      <Button Grid.Row="2" Grid.Column="3" Classes="op" Content="−" Tag="-" Click="BtnOperator_Click"/>
+
+      <Button Grid.Row="3" Grid.Column="0" Classes="num" Content="1" Click="BtnAngka_Click"/>
+      <Button Grid.Row="3" Grid.Column="1" Classes="num" Content="2" Click="BtnAngka_Click"/>
+      <Button Grid.Row="3" Grid.Column="2" Classes="num" Content="3" Click="BtnAngka_Click"/>
+      <Button Grid.Row="3" Grid.Column="3" Classes="op" Content="+" Tag="+" Click="BtnOperator_Click"/>
+
+      <Button Grid.Row="4" Grid.Column="0" Classes="num" Content="±" Click="BtnPlusMinus_Click"/>
+      <Button Grid.Row="4" Grid.Column="1" Classes="num" Content="0" Click="BtnAngka_Click"/>
+      <Button Grid.Row="4" Grid.Column="2" Classes="num" Content="." Click="BtnTitik_Click"/>
+      <Button Grid.Row="4" Grid.Column="3" Classes="eq" Content="=" Click="BtnSamaDengan_Click"/>
+    </Grid>
+  </Grid>
+</Window>

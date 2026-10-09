@@ -1,0 +1,14 @@
+/home/akbar/Projects/Kelas/BelajarCSharp/bin/Debug/net10.0/BelajarCSharp
+/home/akbar/Projects/Kelas/BelajarCSharp/bin/Debug/net10.0/BelajarCSharp.deps.json
+/home/akbar/Projects/Kelas/BelajarCSharp/bin/Debug/net10.0/BelajarCSharp.runtimeconfig.json
+/home/akbar/Projects/Kelas/BelajarCSharp/bin/Debug/net10.0/BelajarCSharp.dll
+/home/akbar/Projects/Kelas/BelajarCSharp/bin/Debug/net10.0/BelajarCSharp.pdb
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.AssemblyInfoInputs.cache
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.AssemblyInfo.cs
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.csproj.CoreCompileInputs.cache
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.dll
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/refint/BelajarCSharp.dll
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.pdb
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/BelajarCSharp.genruntimeconfig.cache
+/home/akbar/Projects/Kelas/BelajarCSharp/obj/Debug/net10.0/ref/BelajarCSharp.dll

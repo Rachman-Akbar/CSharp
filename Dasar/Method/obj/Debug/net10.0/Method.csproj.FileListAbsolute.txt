@@ -1,0 +1,14 @@
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.GeneratedMSBuildEditorConfig.editorconfig
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.AssemblyInfoInputs.cache
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.AssemblyInfo.cs
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.csproj.CoreCompileInputs.cache
+/home/akbar/Projects/Kelas/Method/bin/Debug/net10.0/Method
+/home/akbar/Projects/Kelas/Method/bin/Debug/net10.0/Method.deps.json
+/home/akbar/Projects/Kelas/Method/bin/Debug/net10.0/Method.runtimeconfig.json
+/home/akbar/Projects/Kelas/Method/bin/Debug/net10.0/Method.dll
+/home/akbar/Projects/Kelas/Method/bin/Debug/net10.0/Method.pdb
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.dll
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/refint/Method.dll
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.pdb
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/Method.genruntimeconfig.cache
+/home/akbar/Projects/Kelas/Method/obj/Debug/net10.0/ref/Method.dll

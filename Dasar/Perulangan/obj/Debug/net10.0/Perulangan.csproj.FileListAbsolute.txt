@@ -1,0 +1,14 @@
+/home/akbar/Projects/Kelas/Perulangan/bin/Debug/net10.0/Perulangan
+/home/akbar/Projects/Kelas/Perulangan/bin/Debug/net10.0/Perulangan.deps.json
+/home/akbar/Projects/Kelas/Perulangan/bin/Debug/net10.0/Perulangan.runtimeconfig.json
+/home/akbar/Projects/Kelas/Perulangan/bin/Debug/net10.0/Perulangan.dll
+/home/akbar/Projects/Kelas/Perulangan/bin/Debug/net10.0/Perulangan.pdb
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.GeneratedMSBuildEditorConfig.editorconfig
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.AssemblyInfoInputs.cache
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.AssemblyInfo.cs
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.csproj.CoreCompileInputs.cache
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.dll
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/refint/Perulangan.dll
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.pdb
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/Perulangan.genruntimeconfig.cache
+/home/akbar/Projects/Kelas/Perulangan/obj/Debug/net10.0/ref/Perulangan.dll

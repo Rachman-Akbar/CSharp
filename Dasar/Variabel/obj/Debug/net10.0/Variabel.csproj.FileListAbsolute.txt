@@ -1,0 +1,14 @@
+/home/akbar/Projects/Kelas/Variabel/bin/Debug/net10.0/Variabel
+/home/akbar/Projects/Kelas/Variabel/bin/Debug/net10.0/Variabel.deps.json
+/home/akbar/Projects/Kelas/Variabel/bin/Debug/net10.0/Variabel.runtimeconfig.json
+/home/akbar/Projects/Kelas/Variabel/bin/Debug/net10.0/Variabel.dll
+/home/akbar/Projects/Kelas/Variabel/bin/Debug/net10.0/Variabel.pdb
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.GeneratedMSBuildEditorConfig.editorconfig
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.AssemblyInfoInputs.cache
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.AssemblyInfo.cs
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.csproj.CoreCompileInputs.cache
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.dll
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/refint/Variabel.dll
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.pdb
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/Variabel.genruntimeconfig.cache
+/home/akbar/Projects/Kelas/Variabel/obj/Debug/net10.0/ref/Variabel.dll

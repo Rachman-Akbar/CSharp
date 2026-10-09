@@ -1,0 +1,19 @@
+# 1. Install template Avalonia (sekali saja per laptop)
+dotnet new install Avalonia.Templates
+
+# 2. Buat project baru
+dotnet new avalonia.app -n Kalkulator.Avalonia -o Kalkulator.Avalonia --framework net9.0
+
+# 3. Masuk ke folder project
+cd Kalkulator.Avalonia
+
+# 4. Download paket (pertama kali agak lama, ~2 menit)
+dotnet restore
+
+# 5. Jalankan — jendela desktop langsung terbuka
+dotnet run
+Untuk project berikutnya di kemudian hari, langkah 1 tidak perlu diulang — langsung mulai dari langkah 2 dengan nama lain, misal:
+dotnet new avalonia.app -n NamaAppBaru -o NamaAppBaru --framework net9.0
+cd NamaAppBaru
+dotnet run
+Isi kalkulatornya (tombol, display, logika hitung) tinggal ditulis di dua file: MainWindow.axaml untuk tampilan, MainWindow.axaml.cs untuk logika — sama seperti yang sudah saya buatkan kemarin.

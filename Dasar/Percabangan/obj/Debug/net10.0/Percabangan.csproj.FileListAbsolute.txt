@@ -1,0 +1,14 @@
+/home/akbar/Projects/Kelas/Percabangan/bin/Debug/net10.0/Percabangan
+/home/akbar/Projects/Kelas/Percabangan/bin/Debug/net10.0/Percabangan.deps.json
+/home/akbar/Projects/Kelas/Percabangan/bin/Debug/net10.0/Percabangan.runtimeconfig.json
+/home/akbar/Projects/Kelas/Percabangan/bin/Debug/net10.0/Percabangan.dll
+/home/akbar/Projects/Kelas/Percabangan/bin/Debug/net10.0/Percabangan.pdb
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.GeneratedMSBuildEditorConfig.editorconfig
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.AssemblyInfoInputs.cache
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.AssemblyInfo.cs
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.csproj.CoreCompileInputs.cache
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.dll
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/refint/Percabangan.dll
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.pdb
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/Percabangan.genruntimeconfig.cache
+/home/akbar/Projects/Kelas/Percabangan/obj/Debug/net10.0/ref/Percabangan.dll
